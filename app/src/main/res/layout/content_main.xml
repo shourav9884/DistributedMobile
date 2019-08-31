@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context="com.example.nati.rpcjsontest.MainActivity">
+
+    <TextView
+        android:text="Hello World!"
+        android:id="@+id/tv_server_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/message_text_view"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Messages:"
+        android:id="@+id/message_text_view"
+        android:layout_below="@+id/generate_functions_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp" />
+
+    <Button
+        android:id="@+id/button_client_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button"
+        android:text="Connect to server" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="29dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/server_ip_edit_text"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="55dp"
+        android:layout_toEndOf="@+id/button_client_start" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/server_ip_edit_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text=""
+        android:hint="Server IP Address"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emethodNameEditText"
+        android:hint="Method Name"
+        android:layout_below="@+id/generate_functions_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Functions"
+        android:id="@+id/generate_functions_btn"
+        android:layout_below="@+id/button_client_start"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
+
+    <Button
+        android:id="@+id/start_webserver_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/generate_functions_btn"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/generate_functions_btn"
+        android:text="Start WebServer" />
+
+    <Button
+        android:id="@+id/set_dns_btn"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:text="DNS" />
+
+
+</RelativeLayout>
